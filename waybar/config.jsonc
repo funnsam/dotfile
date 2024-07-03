@@ -1,0 +1,50 @@
+{
+    "layer": "top",
+    "modules-left": ["network", "wireplumber", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["temperature", "cpu", "memory", "battery", "clock"],
+    "clock": {
+        "format-alt": "{:%a, %b %d @ %H:%M}",
+    },
+    "hyprland/window": {
+        "max-length": 75,
+    },
+    "hyprland/workspaces": {
+         "format": "{icon}",
+         "on-scroll-up": "hyprctl dispatch workspace e-1",
+         "on-scroll-down": "hyprctl dispatch workspace e+1",
+    },
+    "memory": {
+		"interval": 5,
+		"format": " {:2}%",
+	},
+	"cpu": {
+		"interval": 5,
+        "format": " {usage:2}%",
+	},
+    "battery": {
+		"interval": 5,
+        "format": " {capacity:2}%",
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": ["", "", ""],
+        "scroll-step": 3,
+        "max-volume": 150,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    },
+    "temperature": {
+        "thermal-zone": @@TEMPERATUREZONE@@,
+        "format": " {temperatureC:2}°C",
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "tooltip-format-wifi": "{signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-ethernet": " ",
+        "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}",
+        "format": "",
+        "format-disconnected": "",
+        "max-length": 50,
+    }
+}

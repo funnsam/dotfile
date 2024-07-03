@@ -1,0 +1,27 @@
+--- hyprland.conf	2024-07-03 08:38:28.603660871 +0000
++++ hyprland_l.conf	2024-07-03 08:38:58.498707358 +0000
+@@ -34,13 +34,13 @@
+     active_opacity = 1.0
+     inactive_opacity = 1.0
+ 
+-    drop_shadow = true
++    drop_shadow = false
+     shadow_range = 4
+     shadow_render_power = 3
+     col.shadow = rgba(1a1a1aee)
+ 
+     blur {
+-        enabled = true
++        enabled = false
+         size = 3
+         passes = 1
+ 
+@@ -49,7 +49,7 @@
+ }
+ 
+ animations {
+-    enabled = true
++    enabled = false
+ 
+     bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+ 
