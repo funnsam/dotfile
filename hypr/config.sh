@@ -1,8 +1,15 @@
 cd "$(dirname "$0")"
+shopt -s extglob
+
+dialog \
+    --title "Hyprland" \
+    --clear \
+    --yesno "Do you want to enable animation and blur in Hyprland?" 0 0
+animation=$?
 
 mkdir ~/.config/hypr
-cp *.conf ~/.config/hypr
+cp !(*@(.sh|.patch)) ~/.config/hypr
 
-if [ $1 == 1 ]; then
+if [ $animation == 1 ]; then
     patch ~/.config/hypr/hyprland.conf hyprland_laptop.patch
 fi

@@ -15,15 +15,15 @@
          "on-scroll-down": "hyprctl dispatch workspace e+1",
     },
     "memory": {
-		"interval": 5,
-		"format": " {:2}%",
-	},
-	"cpu": {
-		"interval": 5,
+        "interval": 5,
+        "format": " {:2}%",
+    },
+    "cpu": {
+        "interval": 5,
         "format": " {usage:2}%",
-	},
+    },
     "battery": {
-		"interval": 5,
+        "interval": 5,
         "format": " {capacity:2}%",
     },
     "wireplumber": {
