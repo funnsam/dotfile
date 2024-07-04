@@ -21,3 +21,6 @@ dialog \
     --clear \
     --yesno "Do you want to enable animation and blur in Hyprland?" 0 0
 ./hypr/config.sh $?
+
+cp .bashrc ~
+./kitty/config.sh
