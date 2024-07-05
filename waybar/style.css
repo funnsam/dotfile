@@ -1,52 +1,88 @@
-window#waybar {
-    background: rgba(21, 52, 72, 0.35);
+@define-color red #ed8796;
+@define-color maroon #ee99a0;
+@define-color peach #f5a97f;
+@define-color yellow #eed49f;
+@define-color green #a6da95;
+@define-color sky #91d7e3;
+@define-color blue #8aadf4;
 
-    color: white;
+@define-color text #cad3f5;
+@define-color subt0 #a5adcb;
+@define-color subt1 #b8c0e0;
+@define-color over0 #6e738d;
+@define-color over1 #8087a2;
+@define-color over2 #939ab7;
+@define-color surf0 #363a4f;
+@define-color surf1 #494d64;
+@define-color surf2 #5b6078;
+@define-color base #24273a;
+
+window#waybar {
+    background: rgba(30, 32, 48, 0.25);
+    color: @text;
 
     font-family: "CaskaydiaCove NFP";
     font-weight: 400;
 }
 
 tooltip {
-    background: rgba(43, 48, 59, 0.5);
-    border: 1px solid rgba(100, 114, 125, 0.5);
+    background: @over0;
+    border: 1px solid @over1;
+    color: @text;
+    text-shadow: none;
 }
 
 tooltip label {
-    color: white;
+    color: @text;
 }
 
-#network, #wireplumber, #workspaces button, #temperature, #cpu, #memory, #battery, #clock {
+label.module {
     transition: all 0.25s;
     outline: none;
     padding: 0 10px;
-    background: rgba(60, 91, 111, 0.5);
-    color: white;
+    color: @text;
     border: none;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-radius: 0;
 }
 
-#wireplumber:hover, #workspaces button:hover, #clock:hover {
+#network, #clock { background: @surf2; }
+#battery, #memory { background: @surf1; }
+#wireplumber, #temperature, #cpu { background: @surf0; }
+
+#wireplumber:hover, #clock:hover {
     box-shadow: inherit;
     text-shadow: inherit;
 
-    background: rgb(60, 91, 111);
-    border: none;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid white;
+    background: @over2;
 }
 
-#workspaces button.active {
-    background-color: rgb(118, 171, 174);
-}
-
-#workspaces button {
+#workspaces {
+    background: @base;
     padding: 0 5px;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#workspaces button {
+    background: transparent;
+    color: @over1;
+
+    border: none;
+    border-radius: 0;
+    outline: none;
+    padding: 0 5px;
+
+    transition: all 0.25s;
+}
+
+window#waybar #workspaces button.active {
+    color: @text;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    box-shadow: inherit;
+    text-shadow: inherit;
+
+    color: @subt0;
 }
