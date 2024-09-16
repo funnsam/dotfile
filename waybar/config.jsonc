@@ -6,6 +6,7 @@
     "modules-right": ["temperature", "cpu", "memory", "clock"],
     "clock": {
         "format-alt": "{:%a, %b %d @ %H:%M}",
+        "timezone": "Asia/Hong_Kong",
     },
     "hyprland/workspaces": {
          "format": "{icon}",
