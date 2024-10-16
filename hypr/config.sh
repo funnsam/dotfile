@@ -7,7 +7,7 @@ dialog \
     --yesno "Do you want to enable animation and blur in Hyprland?" 0 0
 animation=$?
 
-mkdir ~/.config/hypr
+mkdir -p ~/.config/hypr
 cp !(*@(.sh|.patch)) ~/.config/hypr
 
 if [ $animation == 1 ]; then

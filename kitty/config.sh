@@ -1,4 +1,4 @@
 cd "$(dirname "$0")"
 
-mkdir ~/.config/kitty
+mkdir -p ~/.config/kitty
 cp kitty.conf ~/.config/kitty/
