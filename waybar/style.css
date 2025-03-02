@@ -1,21 +1,13 @@
-@define-color red #ed8796;
-@define-color maroon #ee99a0;
-@define-color peach #f5a97f;
-@define-color yellow #eed49f;
-@define-color green #a6da95;
-@define-color sky #91d7e3;
-@define-color blue #8aadf4;
-
-@define-color text #cad3f5;
-@define-color subt0 #a5adcb;
-@define-color subt1 #b8c0e0;
-@define-color over0 #6e738d;
-@define-color over1 #8087a2;
-@define-color over2 #939ab7;
-@define-color surf0 #363a4f;
-@define-color surf1 #494d64;
-@define-color surf2 #5b6078;
-@define-color base #24273a;
+@define-color text #cdd6f4;
+@define-color subt0 #a6adc8;
+@define-color subt1 #bac2de;
+@define-color over0 #6c7086;
+@define-color over1 #7f849c;
+@define-color over2 #9399b2;
+@define-color surf0 #313244;
+@define-color surf1 #45475a;
+@define-color surf2 #585b70;
+@define-color base #1e1e2e;
 
 window#waybar {
     background: rgba(30, 32, 48, 0.25);

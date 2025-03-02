@@ -8,8 +8,8 @@
 
     horizontal = false
 
-    text-color = #cad3f5
-    background-color = #24273aaa
+    text-color = #cdd6f4
+    background-color = #1e1e2eaa
 
     result-spacing = 15
     num-results = 7
@@ -43,7 +43,7 @@
     default-result-background-padding = 0
     default-result-background-corner-radius = 0
 
-    selection-color = #a6da95
+    selection-color = #a6e3a1
     selection-background = #00000000
     selection-background-padding = 0
     selection-background-corner-radius = 0
