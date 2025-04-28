@@ -5,5 +5,6 @@ set +e
 ./kitty/config.sh
 ./tofi.sh
 ./dunst.sh
+./fastfetch/config.sh
 
 cp .bashrc ~
