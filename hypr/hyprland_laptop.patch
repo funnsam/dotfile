@@ -39,5 +39,9 @@
  bind =, xf86audiomute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
  
  windowrulev2 = suppressevent maximize, class:.*
--layerrule = blur, waybar
--layerrule = blur, launcher
+
+-layerrule {
+-    name = Blur layers
+-    match:namespace = (launcher|waybar)
+-    blur = on
+-}
