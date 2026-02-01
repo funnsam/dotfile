@@ -2,7 +2,7 @@ set +e
 
 ./waybar/config.sh
 ./hypr/config.sh
-./kitty/config.sh
+./ghostty.sh
 ./tofi.sh
 ./dunst.sh
 ./fastfetch/config.sh
