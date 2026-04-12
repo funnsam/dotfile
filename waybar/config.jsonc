@@ -37,9 +37,9 @@
         "format": " {temperatureC:2}°C",
     },
     "network": {
-        "format-wifi": " {essid}",
+        "format-wifi": " {essid} {signalStrength}%",
         "tooltip-format-wifi": "{signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
-        "format-ethernet": " ",
+        "format-ethernet": " {bandwidthTotalBits}",
         "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}",
         "format": "",
         "format-disconnected": "",
