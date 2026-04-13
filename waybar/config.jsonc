@@ -1,48 +1,68 @@
 {
     "layer": "top",
-    "height": 35,
-    "modules-left": ["network", "battery", "wireplumber"],
+    "margin": "8 8 0 8",
+    "modules-left": ["wireplumber", "mpris", "custom/fcitx5"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["temperature", "cpu", "memory", "clock"],
-    "clock": {
-        "format-alt": "{:%a, %b %d @ %H:%M}",
+    "modules-right": ["group/hardware", "clock"],
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": ["network", "battery", "cpu", "memory", "temperature"],
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-icons": [" ", " ", " "],
+        "scroll-step": 3,
+        "max-volume": 150,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    },
+    "mpris": {
+        "format": "{status_icon} {position}",
+        "tooltip-format": "{player} ({status}) {dynamic}",
+        "status-icons": {
+            "playing": " ",
+            "paused": " ",
+            "stopped": " ",
+        },
+        "interval": 1,
+    },
+    "custom/fcitx5": {
+        "exec": "~/.config/waybar/fcitx5.sh",
+        "interval": 0.25,
+        "format": "󰌌  {}",
     },
     "hyprland/workspaces": {
          "format": "{icon}",
          "on-scroll-up": "hyprctl dispatch workspace e-1",
          "on-scroll-down": "hyprctl dispatch workspace e+1",
     },
-    "memory": {
-        "interval": 5,
-        "format": " {:2}%",
-    },
-    "cpu": {
-        "interval": 5,
-        "format": " {usage:2}%",
+    "network": {
+        "format-wifi": "  {essid} {signalStrength}%",
+        "format-ethernet": "  {bandwidthTotalBits}",
+        "format-disconnected": " ",
+        "format": "",
+        "max-length": 50,
+        "interval": 10,
+        "tooltip-format-wifi": "{signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}",
     },
     "battery": {
         "interval": 5,
-        "format": " {capacity:2}%",
+        "format": "  {capacity:2}%",
     },
-    "wireplumber": {
-        "format": "{icon} {volume}%",
-        "format-muted": " {volume}%",
-        "format-icons": ["", "", ""],
-        "scroll-step": 3,
-        "max-volume": 150,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage:2}%",
+    },
+    "memory": {
+        "interval": 5,
+        "format": "  {:2}%",
     },
     "temperature": {
         "thermal-zone": @@TEMPERATUREZONE@@,
-        "format": " {temperatureC:2}°C",
+        "format": " {temperatureC:2}°C",
     },
-    "network": {
-        "format-wifi": " {essid} {signalStrength}%",
-        "tooltip-format-wifi": "{signalStrength}%  {bandwidthUpBits}  {bandwidthDownBits}",
-        "format-ethernet": " {bandwidthTotalBits}",
-        "tooltip-format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}",
-        "format": "",
-        "format-disconnected": "",
-        "max-length": 50,
-    }
+    "clock": {
+        "format-alt": "{:%a, %b %d @ %H:%M}",
+    },
 }

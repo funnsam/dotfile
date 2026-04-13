@@ -17,5 +17,5 @@ thermal_zone=$(dialog \
 )
 
 mkdir -p ~/.config/waybar
-cp !(*.sh) ~/.config/waybar
+cp * ~/.config/waybar
 sed -i "s/@@TEMPERATUREZONE@@/$thermal_zone/g" ~/.config/waybar/config.jsonc
