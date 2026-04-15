@@ -3,7 +3,7 @@
     height = 100%
     scale = true
 
-    font = "CaskaydiaCove NFP"
+    font = "FiraCode Nerd Font"
     font-size = 16
 
     horizontal = false

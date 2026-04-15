@@ -11,5 +11,5 @@ mkdir -p ~/.config/hypr
 cp !(*@(.sh|.patch)) ~/.config/hypr
 
 if [ $animation == 1 ]; then
-    patch ~/.config/hypr/hyprland.conf hyprland_laptop.patch
+    sed -i '/\$fancy = true/c\$fancy = false' ~/.config/hypr/hyprland.conf
 fi

@@ -34,6 +34,11 @@
     },
     "hyprland/workspaces": {
          "format": "{icon}",
+         "format-icons": {
+             "special": "*",
+         },
+         "show-special": true,
+         "special-visible-only": true,
          "on-scroll-up": "hyprctl dispatch workspace e-1",
          "on-scroll-down": "hyprctl dispatch workspace e+1",
     },

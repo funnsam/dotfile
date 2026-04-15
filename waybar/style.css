@@ -152,7 +152,7 @@ window#waybar #network.disabled, window#waybar #network.disconnected {
     background: @primary-hover;
 }
 
-window#waybar #temperature.warning {
+window#waybar #temperature.critical {
     background: @error;
     color: @on-error;
 }
