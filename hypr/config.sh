@@ -11,5 +11,5 @@ mkdir -p ~/.config/hypr
 cp !(*@(.sh|.patch)) ~/.config/hypr
 
 if [ $animation == 1 ]; then
-    sed -i '/\$fancy = true/c\$fancy = false' ~/.config/hypr/hyprland.conf
+    sed -i '/local fancy = true/clocal fancy = false' ~/.config/hypr/hyprland.lua
 fi
