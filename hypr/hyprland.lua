@@ -120,7 +120,7 @@ hl.bind(mainMod .. " + R",          hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SHIFT + Q",  hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + V",  hl.dsp.window.float())
 hl.bind(mainMod .. " + P",          hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + F",          hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + SHIFT + F",  hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + mouse:272",  hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273",  hl.dsp.window.resize(), { mouse = true })
 
